@@ -31,6 +31,7 @@ class App(QWidget):
 		super().__init__()
 		self.title = 'YouTube Video Downloader'
 		self.author = 'by oddogan'
+		self.audio = False
 		self.left = 0
 		self.top = 0
 		self.width = 320
