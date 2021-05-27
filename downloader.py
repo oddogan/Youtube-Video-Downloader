@@ -171,7 +171,7 @@ class App(QWidget):
 		download function downloads the video and sends download progress to progress bar.
 		"""
 		self.url.setDisabled(True)
-		self.video = self.yt.streams.filter(only_audio=self.audio).first()
+		self.video = self.yt.streams.filter(only_audio=self.audio).order_by('resolution').desc().first()
 		self.video.download(self.input_dir, self.yt.title)
 		self.centerwindow()
 
